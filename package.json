@@ -1,0 +1,30 @@
+{
+  "name": "fract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:typecheck && npm run test:unit",
+    "build": "sagui build",
+    "develop": "sagui develop --port 3000",
+    "dist": "cross-env NODE_ENV=production sagui build --optimize",
+    "start": "npm run develop",
+    "test:coverage": "npm run test:unit -- --coverage",
+    "test:lint": "sagui lint",
+    "test:typecheck": "sagui typecheck",
+    "test:unit": "cross-env NODE_ENV=test sagui test",
+    "test:unit:watch": "npm run test:unit -- --watch"
+  },
+  "author": "Juan Lulkin <maiz@lulk.in> (https://medium.com/@joaomilho/)",
+  "license": "ISC",
+  "devDependencies": {
+    "flyd": "^0.2.2",
+    "ramda": "^0.23",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-flyd": "^0.2.1",
+    "sagui": "^7.4.0",
+    "todomvc-app-css": "^2.0.6",
+    "todomvc-common": "^1.0.3"
+  }
+}
